@@ -74,6 +74,7 @@ let sql5 = "ALTER TABLE students ADD ingreso DATE"
 let sql6 = "UPDATE `school`.`students` SET `ingreso` = '1987-03-17' WHERE (`student_id` = '1'), UPDATE `school`.`students` SET `ingreso` = '2000-12-04' WHERE (`student_id` = '2'), UPDATE `school`.`students` SET `ingreso` = '2022-07-11' WHERE (`student_id` = '3'), UPDATE `school`.`students` SET `ingreso` = '2021-10-01' WHERE (`student_id` = '4'), UPDATE `school`.`students` SET `ingreso` = '2022-01-01' WHERE (`student_id` = '5'), UPDATE `school`.`students` SET `ingreso` = '2019-03-16' WHERE (`student_id` = '6'), UPDATE `school`.`students` SET `ingreso` = '2018-06-24' WHERE (`student_id` = '7'), UPDATE `school`.`students` SET `ingreso` = '1950-10-17' WHERE (`student_id` = '8'), UPDATE `school`.`students` SET `ingreso` = '2022-05-30' WHERE (`student_id` = '9'), UPDATE `school`.`students` SET `ingreso` = '1810-05-25' WHERE (`student_id` = '10')";
 
 
+
 // connection.query(sql6,function(err,result){
 //     if(err)
 //         console.log(err);
@@ -83,7 +84,10 @@ let sql6 = "UPDATE `school`.`students` SET `ingreso` = '1987-03-17' WHERE (`stud
 //     }
 // })
 
-let sql6bis = "SELECT student_id FROM school.students WHERE ingreso >= \"2022-01-01\"";
+let sql6bis = "SELECT student_id FROM school.students WHERE ingreso >= \"2022-01-01\" ";
+// let sql6bis = `SELECT student_id FROM school.students WHERE ingreso >= "2022-01-01" `;
+// let sql6bis = ' SELECT student_id FROM school.students WHERE ingreso >= "2022-01-01" ' ;
+
 
 connection.query(sql6bis,function(err,result){
     if(err)
