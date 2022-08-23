@@ -28,11 +28,11 @@ sql1= "SELECT duenio.nombre AS nombre_duenio,duenio.apellido AS apellido_duenio,
 
 sql2 = "SELECT COUNT(*) AS cantidad_piezas,colección FROM museo.piezas GROUP BY colección ORDER BY cantidad_piezas DESC "
 
-connection.query(sql2,function(err,result){
-    if (err){
-        console.log(err);
-    }else{
-        console.log("Piezas prestadas");
-        console.log(result);
-    }
-})
+// connection.query(sql2,function(err,result){
+//     if (err){
+//         console.log(err);
+//     }else{
+//         console.log("Piezas prestadas");
+//         console.log(result);
+//     }
+// })
